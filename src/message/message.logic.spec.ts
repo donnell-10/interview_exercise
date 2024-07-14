@@ -249,7 +249,7 @@ describe('MessageLogic', () => {
         senderId,
         conversationId,
         created: new Date('2018-05-11T17:47:40.893Z'),
-        sender: { id: '5fe0cce861c8ea54018385af' },
+        sender: { sender },
         conversation: { id: '5fe0cce861c8ea54018385ae' },
         id: messageId,
         deleted: true,
@@ -549,7 +549,6 @@ describe('MessageLogic', () => {
   class MockConversationChannel {
     send = jest.fn();
   }
-
 
   class MockUserBlocksLogic implements IUserBlocksLogic {
     getBlockedUsers(
